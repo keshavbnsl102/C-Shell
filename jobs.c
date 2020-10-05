@@ -21,9 +21,9 @@ void job(char **comm, int proc[1000],char *procname[1000])
 	    strcat(path,num);
 	    strcat(path,"/status");
           FILE *fd=fopen(path,"r");
-	  char *str1;
-	  char *str2;
-	  char *str3;
+	  char *str1=(char *)malloc(1024);
+	  char *str2=(char *)malloc(1024);
+	  char *str3=(char *)malloc(1024);
 	   size_t a,b,c;
            getline(&str1,&a,fd);
 	   getline(&str2,&b,fd);
